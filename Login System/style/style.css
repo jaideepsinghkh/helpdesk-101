@@ -13,7 +13,15 @@ ul
 	list-style-type: none
 }
 
+::-webkit-input-placeholder { color:#bdc3c7; }
+::-moz-placeholder { color:#bdc3c7; }
+:-ms-input-placeholder { color:#bdc3c7; }
+input:-moz-placeholder { color:#bdc3c7; }
 
+select:focus
+{
+	outline: none;
+}
 
 .head-content
 {
@@ -176,7 +184,7 @@ ul
 
 .login-hearder{
 	font-family: "Bernard MT Condensed";
-	color: #4D3C3C;
+	color: #2c3e50;
 
 }
 
@@ -241,4 +249,86 @@ ul
 .signup-link:visited
 {
 	color: #16a085;
+}
+
+.register-content
+{
+	width: 1000px;
+	margin: 0 auto;
+}
+.register-content table
+{
+
+	float: left;
+	width: 480px;
+
+}
+.register-content table tr
+{
+	height: 70px;
+	color: #7f8c8d;
+}
+.register-content table tr input
+{
+	height: 50px;
+	width: 300px;
+	font-size: 14;
+
+	margin:auto 0;
+	text-indent: 1em;
+	border-radius: 10px;
+	border-style: solid;
+
+}
+.register-button
+{
+	text-indent: 0em;
+	background-color: #16a085;
+	color: #ecf0f1;
+}
+
+.register-button:active{     
+    background-color:#137562;    
+    color:#fff;     
+} 
+
+.contactus-link:link
+{
+	color: #16a085;
+}
+.contactus-link:active
+{
+	color: #16a085;
+}
+.contactus-link:visited
+{
+	color: #16a085;
+}
+.gender-select
+{
+   -webkit-appearance: none;
+  	height: 50px;
+	width: 300px;
+	overflow:hidden;
+	font-size: 14;
+	border-radius: 10px;
+	text-indent: 0.5em;
+	border-style: none;
+	cursor: pointer;
+
+
+}
+.gender-select:focus
+{
+	outline: none;
+
+}
+.gender-select option
+{
+	text-align: left;
+	margin: 0 auto;
+	height: 50px;
+	color: grey;
+	text-indent: 1em;
+	padding-top: 25px;
 }
