@@ -306,7 +306,6 @@ select:focus
 }
 .gender-select
 {
-   -webkit-appearance: none;
   	height: 50px;
 	width: 300px;
 	overflow:hidden;
@@ -315,6 +314,7 @@ select:focus
 	text-indent: 0.5em;
 	border-style: none;
 	cursor: pointer;
+	
 
 
 }
