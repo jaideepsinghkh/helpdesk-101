@@ -5,22 +5,15 @@
 }
 body
 {
-background:#FFCCFF;
+background:#ecf0f1;
 
+}
+ul
+{
+	list-style-type: none
 }
 
 
-
-table, th, td {
-    width:25%;
-    margin-bottom: 1em;
-	
-    
-}
-
-tr{
-	height:30px;
-}
 
 .head-content
 {
@@ -75,6 +68,9 @@ tr{
 	background: url(../image/navibarBG.png);
 	background-repeat: repeat-x;
 
+	position: relative;
+	z-index: 5;
+
 }
 .navi-content
 {
@@ -87,9 +83,10 @@ tr{
 {
 	float: left;
 	width: 200px;
-	height: 30px;
+	height: 70px;
 	line-height: 60px;
 	text-align: center;
+	text-decoration: none;
 
 
 }
@@ -181,4 +178,67 @@ tr{
 	font-family: "Bernard MT Condensed";
 	color: #4D3C3C;
 
+}
+
+.login-content
+{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.login-table
+{
+	text-align: left;
+	width:25%;
+	margin-top: 120px;
+	margin-left: 570px;
+
+}
+
+
+
+
+.login-table tr
+{
+	height: 70px;
+}
+.login-table tr input
+{
+	height: 50px;
+	width: 300px;
+	font-size: 14;
+
+	margin:auto 0;
+	text-indent: 1em;
+	border-radius: 10px;
+	border-style: solid;
+
+}
+.submit-button
+{
+	text-indent: 0em;
+	background-color: #16a085;
+	color: #ecf0f1
+
+}
+.submit-button:active{     
+    background-color:#137562;    
+    color:#fff;     
+}   
+
+.signup-text
+{
+	color: #7f8c8d;
+}
+.signup-link:link
+{
+	color: #16a085;
+}
+.signup-link:active
+{
+	color: #16a085;
+}
+.signup-link:visited
+{
+	color: #16a085;
 }
