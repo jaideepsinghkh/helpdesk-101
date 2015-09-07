@@ -1,0 +1,338 @@
+﻿*
+{
+	padding: 0;
+	margin: 0;
+}
+body
+{
+background:#ecf0f1;
+
+}
+ul
+{
+	list-style-type: none
+}
+
+::-webkit-input-placeholder { color:#bdc3c7; }
+::-moz-placeholder { color:#bdc3c7; }
+:-ms-input-placeholder { color:#bdc3c7; }
+input:-moz-placeholder { color:#bdc3c7; }
+
+select:focus
+{
+	outline: none;
+}
+
+.head-content
+{
+	background: url(../image/headerBG.png);
+	background-repeat: repeat-x;
+	
+	height: 130px;
+	width: 100%;
+
+}
+
+
+.logo-content
+{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+
+	background-image: url(../image/LOGO.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	background-position-top: 15px;
+	background-size: 18%;
+
+	
+	text-align: center;
+
+
+
+}
+.head-text
+{
+	margin-left: 120px;
+}
+.head-text li
+{
+	float: left;
+	list-style: none;
+	margin-left: 60px;
+	margin-top: 50px;
+	font-family: alike;
+	color: white;
+	font-weight: 500;
+	font-style: normal;
+
+
+}
+.navi-bar
+{
+	width: 100%;
+	height: 70px;
+	background: url(../image/navibarBG.png);
+	background-repeat: repeat-x;
+
+	position: relative;
+	z-index: 5;
+
+}
+.navi-content
+{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto;
+
+}
+.navi-item
+{
+	float: left;
+	width: 200px;
+	height: 70px;
+	line-height: 60px;
+	text-align: center;
+	text-decoration: none;
+
+
+}
+.navi-item a 
+{
+	display: block;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #95a5a6;
+
+	font-family: abel;
+	font-style: normal;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+.navi-item:hover a
+{
+	background-color: #95a5a6;
+	display: block;
+}
+.navi-item a:link
+{
+	color: white;
+	text-decoration: none;
+}
+.navi-item:hover a:link
+{
+	color: 3b3b3b;
+	text-decoration: none;
+}
+
+.navi-item a:active
+{
+	color: black;
+	text-decoration: none;
+	font-size:20px;
+}
+.navi-item:hover a:active
+{
+	color: 3b3b3b;
+	text-decoration: none;
+}
+
+.navi-item a:visited
+{
+	color: white;
+	text-decoration: none;
+}
+.navi-item:hover a:visited
+{
+	color: 3b3b3b;
+	text-decoration: none;
+}
+
+.navi-item div
+{
+	display: none;
+}
+.navi-item:hover div
+{
+
+	background-color: #95a5a6;
+	display: inline;
+}
+
+
+.sub-navi-menu
+{
+	list-style: none;
+	width: 1000px;
+	margin-left: -200px;
+}
+.sub-navi-menu2
+{
+	list-style: none;
+	width: 1000px;
+	margin-left: -400px;
+}
+.r-border
+{
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-right-color: #95a5a6;
+	
+}
+
+.login-hearder{
+	font-family: "Bernard MT Condensed";
+	color: #2c3e50;
+
+}
+
+.login-content
+{
+	width: 1000px;
+	margin-left:12em;
+}
+
+.login-table
+{
+	text-align: left;
+	width:25%;
+	margin-top: 120px;
+	margin-left: 570px;
+
+}
+
+
+
+
+.login-table tr
+{
+	height: 70px;
+}
+.login-table tr input
+{
+	height: 50px;
+	width: 300px;
+	font-size: 14;
+
+	margin:auto 0;
+	text-indent: 1em;
+	border-radius: 10px;
+	border-style: solid;
+
+}
+.submit-button
+{
+	text-indent: 0em;
+	background-color: #16a085;
+	color: #ecf0f1
+
+}
+.submit-button:active{     
+    background-color:#137562;    
+    color:#fff;     
+}   
+
+.signup-text
+{
+	color: #7f8c8d;
+}
+.signup-link:link
+{
+	color: #16a085;
+}
+.signup-link:active
+{
+	color: #16a085;
+}
+.signup-link:visited
+{
+	color: #16a085;
+}
+
+.register-content
+{
+	width: 1000px;
+	margin: 0 auto;
+}
+.register-content table
+{
+
+	float: left;
+	width: 480px;
+
+}
+.register-content table tr
+{
+	height: 70px;
+	color: #7f8c8d;
+}
+.register-content table tr input
+{
+	height: 50px;
+	width: 300px;
+	font-size: 14;
+
+	margin:auto 0;
+	text-indent: 1em;
+	border-radius: 10px;
+	border-style: solid;
+
+}
+.register-button
+{
+	text-indent: 0em;
+	background-color: #16a085;
+	color: #ecf0f1;
+}
+
+.register-button:active{     
+    background-color:#137562;    
+    color:#fff;     
+} 
+
+.contactus-link:link
+{
+	color: #16a085;
+}
+.contactus-link:active
+{
+	color: #16a085;
+}
+.contactus-link:visited
+{
+	color: #16a085;
+}
+.gender-select
+{
+  	height: 50px;
+	width: 300px;
+	overflow:hidden;
+	font-size: 14;
+	border-radius: 10px;
+	text-indent: 0.5em;
+	border-style: none;
+	cursor: pointer;
+	
+
+
+}
+.gender-select:focus
+{
+	outline: none;
+
+}
+.gender-select option
+{
+	text-align: left;
+	margin: 0 auto;
+	height: 50px;
+	color: grey;
+	text-indent: 1em;
+	padding-top: 25px;
+}
+
+h1{
+	text-align:center;
+	font-size:50px;
+}
