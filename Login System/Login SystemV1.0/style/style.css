@@ -238,7 +238,7 @@ select:focus
 	margin:auto 0;
 	text-indent: 1em;
 	border-radius: 10px;
-	border-style: solid;
+	border-style: none;
 
 }
 .submit-button
@@ -296,7 +296,7 @@ select:focus
 	margin:auto 0;
 	text-indent: 1em;
 	border-radius: 10px;
-	border-style: solid;
+	border-style: none;
 
 }
 .register-button
@@ -436,7 +436,8 @@ h3
 {
 	padding-top: 20px;
 	width: 400px;
-	color: #555e5f;
+	color: #13866f;
+	
 }
 
 .us-content
@@ -447,5 +448,90 @@ h3
 	background: url(../image/us-bg.png);
 
 
-	box-shadow: 0 0 5px 0.1px #3b3b3b;
+	box-shadow: 0 0 5px 0.2px #3b3b3b;
+}
+
+.home-content
+{
+	margin: 0 auto;
+	width: 998px;
+	height: 900px;
+	border: 1px solid red;
+}
+
+.siteMap-content
+{
+	margin-top: 40px;
+	padding-top: 30px;
+	padding-left: 50px;
+	height: 280px;
+	width: 100%;
+	max-height: 280px;
+	background-color: #3d6b99;
+}
+.siteMap
+{
+	height: 200px;
+	margin: 0 auto;
+	width: 1000px;
+
+}
+.siteMap div
+{
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+.siteMap div a
+{
+	display: block;
+	padding-top: 20px;
+	color: #ecf0f1;
+	text-decoration: none;
+	opacity: 70%;
+	line-height: 12px;
+}
+.siteMap div a:link
+{
+	
+}
+.siteMap div a:active
+{
+	
+}
+.siteMap div a:visited
+{
+	
+}
+.footer-menu
+{
+	color: #ecf0f1;
+	font-weight: 500;
+	font-size: 24px;
+	text-decoration: none;
+
+}
+.footer-menu:link
+{
+	color: #ecf0f1;
+}
+.footer-menu:active
+{
+	color: #ecf0f1;
+}
+.footer-menu:visited
+{
+	color: #ecf0f1;
+}
+.social-links
+{
+	margin: 0 auto;
+	width: 100%;
+	height: 150px;
+	background-color: #2c3e50;
+
+}
+.social-links div
+{
+	float: left;
 }

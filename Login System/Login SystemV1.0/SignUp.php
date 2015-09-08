@@ -11,19 +11,17 @@ session_start();
 
 			<body>
 			<div class="head-content">
-				<div class="Logo-content">
-					<ul class="head-text">
-						<li class="r-border">
-							the Brisbane Help Desk &nbsp;
-							<br>Brisbane, Queensland &nbsp;
+		<div class="Logo-content">
+			<ul class="head-text">
+				<li class="r-border" style="width: 200px">
+					The Brisbane Help Desk
+					<br>
+					Brisbane, Queensland
 
-						</li>
-						<li>
-							Whenever, &nbsp; Whoever, &nbsp; Wherever
-						</li>
-					</ul>
-				</div>
-			</div>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<nav class="navi-bar">
 		<div class="navi-content">
 			<ul>
@@ -36,44 +34,39 @@ session_start();
 					<a href="services.php">Services</a>
 					<div>
 						<ul>
-							<li class="sub-navi-menu"><a href="#">Service1</a></li>
-							<li class="sub-navi-menu"><a href="#">Service2</a></li>
-							<li class="sub-navi-menu"><a href="#">Service3</a></li>
+							<li class="sub-navi-menu"><a href="#">Plumbers</a></li>
+							<li class="sub-navi-menu"><a href="#">Electrician</a></li>
+							<li class="sub-navi-menu"><a href="#">Air Conditioning</a></li>
+							<li class="sub-navi-menu"><a href="#">Building Work</a></li>
+							<li class="sub-navi-menu"><a href="#">Car Repairs</a></li>
 						</ul>
 					</div>
 				</li>
 
 				<li class="navi-item">
 					<a href="contactus.php">Contact Us</a>
-					<div>
-						<ul>
-							<li class="sub-navi-menu2"><a href="#">Administrator contact</a></li>
-							<li class="sub-navi-menu2"><a href="#">Brisbane Help desk center</a></li>
-							<li class="sub-navi-menu2"><a href="#">Volunteer contact</a></li>
-						</ul>
-					</div>
 				</li>
 				
 				<li class="navi-item">				
-				
+
 					<a href="aboutus.php">About Us</a>
 					
 				</li>
 				
 				<li class="navi-item">
 
-							<?php
-							
+					<?php
+
 					if(isset($_SESSION['user'])){
-					 echo "<a class='r-border' href='account.php'> Account Details</a>";
-					 echo "<div> <ul><li class='sub-navi-menu2'><a href='logout.php'>Logout</a></li></ul> </div>";
-   					 
+						echo "<a href='account.php'> Account Details</a>";
+						echo "<div> <ul><li class='sub-navi-menu3'><a href='logout.php'>Logout</a></li></ul> </div>";
+
 					}		
 					else{		
-					echo "<a class='r-border' href='login.php'>Login</a>"	;				
-					 }
-					 
-							?>
+						echo "<a href='login.php'>Login</a>";				
+					}
+
+					?>
 
 
 				</li>
