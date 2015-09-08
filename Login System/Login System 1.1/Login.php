@@ -1,11 +1,12 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
-<title>Contact Us</title>
+<title>Login</title>
 	<link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 
@@ -83,59 +84,90 @@ session_start();
 		</div>
 	</nav>
 	
-	<div class="contact-content">
+	<br>
 
-		<div style="height: 100px">
-			<p class="welcometitle">Address</p>
-		</div>
+<div class="login-content">
 
-		<div style="height:600px">
-			<div style="float:left;width: 660px">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d884.9443264499757!2d153.02844175!3d-27.47619155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a106e952fed%3A0xabb23d2a249a3fb8!2sB+Block%2C+Brisbane+QLD+4000!5e0!3m2!1sen!2sau!4v1441696772971" width="660" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
 
-			<div style="float: left;width: 200px;margin-left: 90px; margin-top: 50px;">
-				<div >
-					<h3 style="margin-left: -5px;">Visit us at<h3>
-				</div>
-				<div class="contact-para">
-					B Block,<br> Brisbane QLD 4000
-				</div>
-				<br>
-				<hr>
-				<br>
-				<br>
-				<div class="contact-para">
-					General Enquiry:
-				</div>
-				<div class="contact-subpara">
-					+61231231231
-				</div>
-				<br>
-				<div class="contact-para">
-					Technical Support:
-				</div>
-				<div class="contact-subpara">
-					+63213213213
-				</div>
-				<br>
-				<hr>
-				<br>
-				<br>
+<?php
+if (!isset($_POST['submit'])){
+?>
+<!-- The HTML login form -->
+	<form action="<?=$_SERVER['PHP_SELF']?>" method="post">
 
-				<div class="contact-para">
-					Complaints hotline:
-				</div>
-				<div class="contact-subpara">
-					+61321321321
-				</div>
-				<br>
-				<hr>
-			</div>
-		</div>
-	</div>
+	<table class="login-table">
+		<tr>
+			<td colspan="2">
+			<h1 class="login-hearder">Login</h1> <br>		
+			</td>
+		</tr>
+		
+		<tr>
+			<td >
+			<input type="text" name="user" placeholder= "Enter your Username" autofocus="autofocus">
+			</td>
+		</tr>
+		<tr>
+
+			<td>
+			<input type="password" name="password" placeholder = "Password">
+			</td>
+		</tr>
+		
+		<tr>
+			<td> 
+			<input name="submit" type="submit" value="Login" class="submit-button" style="text-indent: 0em">
+			</td>
+		</tr>
+		
+		<tr class="signup-text">
+			<td>
+			<p align="center">-----------------------OR-----------------------</p>
+			<br>
+				<h4 align="center">
+					New to Helpdesk? 
+					<a href="signup.php" class="signup-link">Sign Up</a>
+				</h4>
+			</td>
+		</tr>
+
+	</table>
+	</form>
+
+<?php
+} 
+
+
+else {
+	require_once("db_const.php");
+	$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+	# check connection
+	if ($mysqli->connect_errno) {
+		echo "<p>MySQL error no {$mysqli->connect_errno} : {$mysqli->connect_error}</p>";
+		exit();
+	}
+ 
+	$user = $_POST['user'];
+	$password = $_POST['password'];
 	
 	
+ 
+	$sql = "SELECT * from users WHERE user LIKE '{$user}' AND password LIKE '{$password}' LIMIT 1";
+	$result = $mysqli->query($sql);
+	if (!$result->num_rows == 1) {
+		echo "<p>Invalid username/password combination</p>";
+		
+	} else {
+		echo "<h1>Logged in successfully</h1>";
+		$_SESSION['user']= $user;	
+		header( "Refresh:1; url=logged.php", true, 303);
+		}
+}
+?>		
+	
+</div>
+
+ 	
 </body>
 
 </html>

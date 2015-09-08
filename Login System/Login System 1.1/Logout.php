@@ -5,7 +5,7 @@ session_start();
 <html>
 
 <head>
-<title>Contact Us</title>
+<title>Logout in successfully</title>
 	<link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 
@@ -75,7 +75,6 @@ session_start();
 					 
 							?>
 
-
 				</li>
 				
 				
@@ -83,58 +82,21 @@ session_start();
 		</div>
 	</nav>
 	
-	<div class="contact-content">
+	<?php
+// remove all session variables
+			session_unset(); 
 
-		<div style="height: 100px">
-			<p class="welcometitle">Address</p>
-		</div>
-
-		<div style="height:600px">
-			<div style="float:left;width: 660px">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d884.9443264499757!2d153.02844175!3d-27.47619155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a106e952fed%3A0xabb23d2a249a3fb8!2sB+Block%2C+Brisbane+QLD+4000!5e0!3m2!1sen!2sau!4v1441696772971" width="660" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
-
-			<div style="float: left;width: 200px;margin-left: 90px; margin-top: 50px;">
-				<div >
-					<h3 style="margin-left: -5px;">Visit us at<h3>
-				</div>
-				<div class="contact-para">
-					B Block,<br> Brisbane QLD 4000
-				</div>
-				<br>
-				<hr>
-				<br>
-				<br>
-				<div class="contact-para">
-					General Enquiry:
-				</div>
-				<div class="contact-subpara">
-					+61231231231
-				</div>
-				<br>
-				<div class="contact-para">
-					Technical Support:
-				</div>
-				<div class="contact-subpara">
-					+63213213213
-				</div>
-				<br>
-				<hr>
-				<br>
-				<br>
-
-				<div class="contact-para">
-					Complaints hotline:
-				</div>
-				<div class="contact-subpara">
-					+61321321321
-				</div>
-				<br>
-				<hr>
-			</div>
-		</div>
-	</div>
+// destroy the session 
+			session_destroy(); 
+			
+		header( "Refresh:1; url=home.php", true, 303);
+				
+				?>
 	
+	<h1> Logged out successfully</h1>
+	
+	
+
 	
 </body>
 

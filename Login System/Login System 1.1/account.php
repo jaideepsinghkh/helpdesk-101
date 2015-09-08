@@ -5,7 +5,7 @@ session_start();
 <html>
 
 <head>
-<title>Contact Us</title>
+<title>Account Details</title>
 	<link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 
@@ -72,7 +72,6 @@ session_start();
 					else{		
 					echo "<a class='r-border' href='login.php'>Login</a>"	;				
 					 }
-					 
 							?>
 
 
@@ -82,58 +81,43 @@ session_start();
 			</ul>
 		</div>
 	</nav>
+		
+	<h1>Account Details</h1>
 	
-	<div class="contact-content">
 
-		<div style="height: 100px">
-			<p class="welcometitle">Address</p>
-		</div>
+<h1 style="font-size:30px;">
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "php_mysql_login_system";
 
-		<div style="height:600px">
-			<div style="float:left;width: 660px">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d884.9443264499757!2d153.02844175!3d-27.47619155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915a106e952fed%3A0xabb23d2a249a3fb8!2sB+Block%2C+Brisbane+QLD+4000!5e0!3m2!1sen!2sau!4v1441696772971" width="660" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
 
-			<div style="float: left;width: 200px;margin-left: 90px; margin-top: 50px;">
-				<div >
-					<h3 style="margin-left: -5px;">Visit us at<h3>
-				</div>
-				<div class="contact-para">
-					B Block,<br> Brisbane QLD 4000
-				</div>
-				<br>
-				<hr>
-				<br>
-				<br>
-				<div class="contact-para">
-					General Enquiry:
-				</div>
-				<div class="contact-subpara">
-					+61231231231
-				</div>
-				<br>
-				<div class="contact-para">
-					Technical Support:
-				</div>
-				<div class="contact-subpara">
-					+63213213213
-				</div>
-				<br>
-				<hr>
-				<br>
-				<br>
+$sql = "SELECT * FROM users WHERE user='".$_SESSION['user']."'";
+$result = $conn->query($sql);
 
-				<div class="contact-para">
-					Complaints hotline:
-				</div>
-				<div class="contact-subpara">
-					+61321321321
-				</div>
-				<br>
-				<hr>
-			</div>
-		</div>
-	</div>
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "User ID: " . $row["id"]. "<br> Name:" . $row["fname"]. " " . $row["lname"].  "<br>";
+		echo "Gender:"  . $row["gender"] . "<br> Date of Birth:".  $row["dob"]. "<br>";
+		echo "Nationality"  . $row["nationality"]. "<br> Address:"  . $row["add1"]. "<br>"  . $row["add2"]. ","  . $row["add3"]. "<br>" ;
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>	
+	
+
+	
+	</h1>
 	
 	
 </body>
