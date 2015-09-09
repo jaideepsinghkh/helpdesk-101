@@ -128,6 +128,8 @@ session_start();
 		</div>
 	</div>
 	
+	<!-- include the footer -->
+	<?php include 'footerBar.php' ?>
 	
 </body>
 

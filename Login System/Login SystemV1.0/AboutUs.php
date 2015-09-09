@@ -82,25 +82,30 @@ session_start();
 			</ul>
 		</div>
 	</nav>
-	<div class="aboutus-bg">
-	<div class="aboutus-content">
-		<div>
-			<h1 style="text-align: left">Us</h1>
+	<div style="height: 1300px;">
+		<div class="aboutus-bg">
+			<div class="aboutus-content">
+				<div>
+					<h1 style="text-align: left">Us</h1>
+				</div>
+
+				<div class="aboutus-title">
+					the short discription of company abcabcb sbsad khqw hueo asoihdq owhdao shdlw ahd jkab sjdq wui dhaos
+				</div>
+
+				<div class="us-content">
+
+
+				</div>
+
+
+			</div>
 		</div>
-		
-		<div class="aboutus-title">
-			the short discription of company abcabcb sbsad khqw hueo asoihdq owhdao shdlw ahd jkab sjdq wui dhaos
-		</div>
-
-		<div class="us-content">
-			
-
-		</div>
-
-
-
 	</div>
-	</div>
+
+	<!-- include the footer -->
+	<?php include 'footerBar.php' ?>
+
 </body>
 
 </html>

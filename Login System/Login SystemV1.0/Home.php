@@ -5,12 +5,12 @@ session_start();
 <html>
 
 <head>
-<title>Registration/Login</title>
+	<title>Home</title>
 	<link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 
 <body>
-<div class="head-content">
+	<div class="head-content">
 		<div class="Logo-content">
 			<ul class="head-text">
 				<li class="r-border" style="width: 200px">
@@ -75,7 +75,16 @@ session_start();
 			</ul>
 		</div>
 	</nav>
-	
+
+
+	<div class="">
+
+		<div class="home-content">
+			hello
+
+		</div>
+	</div>
+
 	<!-- include the footer -->
 	<?php include 'footerBar.php' ?>
 	

@@ -1,75 +1,67 @@
-<?php
-echo ' <div class="head-content">
-		<div class="Logo-content">
-			<ul class="head-text">
-				<li class="r-border" style="width: 200px">
-					The Brisbane Help Desk
-					<br>
-					Brisbane, Queensland
 
-				</li>
-			</ul>
-		</div>
-	</div>
-	<nav class="navi-bar">
-		<div class="navi-content">
-			<ul>
-				<li class="navi-item">
-					<a href="home.php">Home</a>
+	<footer>
+		<div class="siteMap-content">
+			<div class="siteMap">
 
-				</li>
-
-				<li class="navi-item">
-					<a href="services.php">Services</a>
 					<div>
-						<ul>
-							<li class="sub-navi-menu"><a href="#">Plumbers</a></li>
-							<li class="sub-navi-menu"><a href="#">Electrician</a></li>
-							<li class="sub-navi-menu"><a href="#">Air Conditioning</a></li>
-							<li class="sub-navi-menu"><a href="#">Building Work</a></li>
-							<li class="sub-navi-menu"><a href="#">Car Repairs</a></li>
-						</ul>
+						<a href="#" class="footer-menu">Home</a><br>
+						<a href="#">-- My request list</a>
+						<a href="#"><nobr>-- Requests enquiry</nobr>></a>
 					</div>
-				</li>
 
-				<li class="navi-item">
-					<a href="contactus.php">Contact Us</a>
-				</li>
-				
-				<li class="navi-item">				
+					<div>
+						<a href="#" class="footer-menu">Services</a><br>
+						<a href="#">-- Service Lists</a>
+						<a href="#">-- Plumbers</a></li>
+						<a href="#">-- Electrician</a>	
+						<a href="#">-- Air conditioning</a>
+						<a href="#">-- Building work</a>
+						<a href="#">-- Car repairs</a>
+					</div>
 
-					<a href="aboutus.php">About Us</a>
-					
-				</li>
-				
-				<li class="navi-item">
+					<div>
+						<a href="#" class="footer-menu">Contact us</a><br>
+						<a href="#">-- Hotline numbers</a>
+						<a href="https://goo.gl/maps/2J1xR"><nobr>-- See us on GoogleMap</nobr></a>
+					</div>
 
-					<?php
+					<div>
+						<a href="#" class="footer-menu">About Us</a>
+					</div>
 
-					if(isset($_SESSION['user'])){
-						echo "<a href='account.php'> Account Details</a>";
-						echo "<div> <ul><li class='sub-navi-menu3'><a href='logout.php'>Logout</a></li></ul> </div>";
-
-					}		
-					else{		
-						echo "<a href='login.php'>Login</a>";				
-					}
-
-					?>
-
-
-				</li>
-				
-				
-			</ul>
+					<div>
+						<a href="#" class="footer-menu">User</a><br>
+						<a href="#">-- Login</a>
+						<a href="#">-- Register</a>
+					</div>
+			</div>
 		</div>
-	</nav>'
-?>
 
-<!-- 					<div>
-						<ul>
-							<li class="sub-navi-menu2"><a href="#">Administrator contact</a></li>
-							<li class="sub-navi-menu2"><a href="#">Brisbane Help desk center</a></li>
-							<li class="sub-navi-menu2"><a href="#">Volunteer contact</a></li>
-						</ul>
-					</div> -->
+		<div class="socials-content">
+		<div class="socials">
+			<div class="joingroup" style="width: 230px;">
+				<nobr>Join our social group on :</nobr>
+			</div>
+			<div class="facebook">
+				<a href="#" >Facebook</a>
+			</div>
+
+			<div class="instagram">
+				<a href="#">Instagram</a>
+			</div>
+
+			<div class="linkedin">
+				<a href="#">Linkin</a>
+			</div>
+
+			<div class="twitter">
+				<a href="#">twitter</a>
+			</div>
+		</div>
+		</div>
+		<div class="copyrights">
+			<p>&#169; IFB299 Team 41 2C4S. All rights reserved.</p>
+			
+		</div>
+
+	</footer>

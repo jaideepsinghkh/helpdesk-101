@@ -75,9 +75,13 @@ session_start();
 			</ul>
 		</div>
 	</nav>
-	
+	<div style="height: 900px;">
 	<h1>Services</h1>
+	</div>
+
 	
+	<!-- include the footer -->
+	<?php include 'footerBar.php' ?>
 </body>
 
 </html>
