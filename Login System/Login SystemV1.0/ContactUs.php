@@ -46,13 +46,13 @@ session_start();
 				<li class="navi-item">
 					<a href="contactus.php">Contact Us</a>
 				</li>
-				
-				<li class="navi-item">				
+
+				<li class="navi-item">
 
 					<a href="aboutus.php">About Us</a>
-					
+
 				</li>
-				
+
 				<li class="navi-item">
 
 					<?php
@@ -61,21 +61,21 @@ session_start();
 						echo "<a href='account.php'> Account Details</a>";
 						echo "<div> <ul><li class='sub-navi-menu3'><a href='logout.php'>Logout</a></li></ul> </div>";
 
-					}		
-					else{		
-						echo "<a href='login.php'>Login</a>";				
+					}
+					else{
+						echo "<a href='login.php'>Login</a>";
 					}
 
 					?>
 
 
 				</li>
-				
-				
+
+
 			</ul>
 		</div>
 	</nav>
-	
+
 	<div class="contact-content">
 
 		<div style="height: 100px">
@@ -95,8 +95,15 @@ session_start();
 					B Block,<br> Brisbane QLD 4000
 				</div>
 				<br>
+
 				<hr>
 				<br>
+				<div class="contact-subpara">
+					Mon.- Fri.<br>
+					07:00am - 10:00pm, <br><br>
+					Sat.– Sun.<br>
+					10:00am - 5:00pm,
+				</div>
 				<br>
 				<div class="contact-para">
 					General Enquiry:
@@ -126,11 +133,14 @@ session_start();
 				<hr>
 			</div>
 		</div>
+
+
+
 	</div>
-	
+
 	<!-- include the footer -->
 	<?php include 'footerBar.php' ?>
-	
+
 </body>
 
 </html>
