@@ -28,7 +28,7 @@ select:focus
 {
 	background: url(../image/headerBG.png);
 	background-repeat: repeat-x;
-	
+
 	height: 130px;
 	width: 100%;
 
@@ -47,7 +47,7 @@ select:focus
 	background-position-top: 15px;
 	background-size: 25%;
 
-	
+
 	text-align: center;
 
 
@@ -101,7 +101,7 @@ select:focus
 
 
 }
-.navi-item a 
+.navi-item a
 {
 	display: block;
 
@@ -134,7 +134,7 @@ select:focus
 {
 	background-color: #737f80;
 	text-decoration: none;
-	
+
 }
 .navi-item:hover a:active
 {
@@ -199,7 +199,7 @@ select:focus
 	border-right-style: solid;
 	border-right-width: 1px;
 	border-right-color: #95a5a6;
-	
+
 }
 
 .login-hearder{
@@ -249,10 +249,10 @@ select:focus
 	color: #ecf0f1
 
 }
-.submit-button:active{     
-    background-color:#137562;    
-    color:#fff;     
-}   
+.submit-button:active{
+    background-color:#137562;
+    color:#fff;
+}
 
 .signup-text
 {
@@ -307,10 +307,10 @@ select:focus
 	color: #ecf0f1;
 }
 
-.register-button:active{     
-    background-color:#137562;    
-    color:#fff;     
-} 
+.register-button:active{
+    background-color:#137562;
+    color:#fff;
+}
 
 .contactus-link:link
 {
@@ -334,7 +334,7 @@ select:focus
 	text-indent: 0.5em;
 	border-style: none;
 	cursor: pointer;
-	
+
 
 
 }
@@ -374,6 +374,7 @@ h1{
 {
 	width: 1000px;
 	margin: 0 auto;
+	height
 }
 .contact-para
 {
@@ -438,7 +439,7 @@ h3
 	padding-top: 20px;
 	width: 400px;
 	color: #13866f;
-	
+
 }
 
 .us-content
@@ -498,18 +499,18 @@ footer
 }
 .siteMap div a:link
 {
-	
+
 	color: #ecf0f1;
 }
 .siteMap div a:active
 {
 	color: #ecf0f1;
-	
+
 }
 .siteMap div a:visited
 {
 	color: #ecf0f1;
-	
+
 }
 .footer-menu
 {
@@ -557,7 +558,7 @@ footer
 	text-align: center;
 }
 
-.socials div a 
+.socials div a
 {
 	color: white;
 	text-decoration: none;
@@ -612,4 +613,9 @@ footer
 	text-align: center;
 	color: #2c3e50;
 	line-height: 50px;
+}
+
+.bold
+{
+	font-weight: bold;
 }

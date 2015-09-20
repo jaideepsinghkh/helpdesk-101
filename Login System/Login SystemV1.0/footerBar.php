@@ -13,7 +13,7 @@
 						<a href="#" class="footer-menu">Services</a><br>
 						<a href="#">-- Service Lists</a>
 						<a href="#">-- Plumbers</a></li>
-						<a href="#">-- Electrician</a>	
+						<a href="#">-- Electrician</a>
 						<a href="#">-- Air conditioning</a>
 						<a href="#">-- Building work</a>
 						<a href="#">-- Car repairs</a>
@@ -30,9 +30,11 @@
 					</div>
 
 					<div>
-						<a href="#" class="footer-menu">User</a><br>
+						<a href="#" class="footer-menu">Users</a><br>
 						<a href="#">-- Login</a>
 						<a href="#">-- Register</a>
+						<br>
+						<a href="#">-- Staff Login</a>
 					</div>
 			</div>
 		</div>
@@ -61,7 +63,7 @@
 		</div>
 		<div class="copyrights">
 			<p>&#169; IFB299 Team 41 2C4S. All rights reserved.</p>
-			
+
 		</div>
 
 	</footer>
