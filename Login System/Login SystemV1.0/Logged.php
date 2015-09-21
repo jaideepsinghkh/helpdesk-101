@@ -5,7 +5,7 @@ session_start();
 <html>
 
 <head>
-<title>Services</title>
+<title>Logged in successfully</title>
 	<link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 
@@ -75,34 +75,13 @@ session_start();
 			</ul>
 		</div>
 	</nav>
-	<div class="services-container">
-		
-		<div class="service-class">
-		<div>
-			<h1 class="choose-words">Choose your serivce type:</h1>
-		</div>
+	<p style="text-align:center;font-size:40px">
+	<?php
+		echo "Welcome to Help Desk ".$_SESSION['user'].", what can we help you today?<br/>";
+		echo "<a href='logout.php'> Logout</a>";
 
-			<div><a href="plumbers.php"><img src="image/plumbers.png" width="200px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/electrician.png" width="200px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/aircondition.png" width="200px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/buildingwork.png" width="200px" border="none"></a>
-			</div>
-		
-			<div><a href="plumbers.php"><img src="image/carrepair.png" width="200px" border="none"></a>
-			</div>
-
-		</div>
-	</div>
-
-	
-	<!-- include the footer -->
-	<?php include '../footerBar.php' ?>
+	?>
+	</p>
 </body>
 
 </html>
