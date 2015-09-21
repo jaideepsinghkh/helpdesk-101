@@ -619,3 +619,41 @@ footer
 {
 	font-weight: bold;
 }
+
+.services-container
+{
+	height: 900px;
+}
+
+.service-class
+{
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.service-class div
+{
+	margin: 70px 80px 30px 50px;
+	float: left;
+}
+.service-class div a
+{
+
+}
+.choose-words
+{
+	margin-top: -60px;
+	text-align: left;
+	font-size: 35px;
+	width: 999px;
+}
+
+.paragraph
+{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.services-container2
+{
+}
