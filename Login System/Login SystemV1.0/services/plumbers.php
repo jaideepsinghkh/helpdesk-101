@@ -77,27 +77,7 @@ session_start();
 	</nav>
 	<div class="services-container">
 		
-		<div class="service-class">
-		<div>
-			<h1 class="choose-words">Choose your serivce type:</h1>
-		</div>
-
-			<div><a href="#"><img src="image/plumbers.png" width="200px" border="none"></a>
-			</div>
-
-			<div><a href="#"><img src="image/electrician.png" width="200px" border="none"></a>
-			</div>
-
-			<div><a href="#"><img src="image/aircondition.png" width="200px" border="none"></a>
-			</div>
-
-			<div><a href="#"><img src="image/buildingwork.png" width="200px" border="none"></a>
-			</div>
 		
-			<div><a href="#"><img src="image/carrepair.png" width="200px" border="none"></a>
-			</div>
-
-		</div>
 	</div>
 
 	
