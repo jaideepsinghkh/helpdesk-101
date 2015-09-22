@@ -102,7 +102,7 @@ session_start();
 
 	
 	<!-- include the footer -->
-	<?php include '../footerBar.php' ?>
+	<?php include 'footerBar.php' ?>
 </body>
 
 </html>
