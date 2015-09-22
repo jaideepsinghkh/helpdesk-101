@@ -1,0 +1,1 @@
+SELECT * FROM request WHERE user  IN (SELECT id FROM users WHERE user='Jee');

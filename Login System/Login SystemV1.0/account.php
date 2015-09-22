@@ -1,5 +1,21 @@
 <?php
 session_start();
+
+if($_SESSION['roles']=="user"){
+}
+
+else if($_SESSION['roles']=="admin"){
+header( "Location: staffaccount.php");
+exit();
+
+}
+
+
+else{
+header( "Location: error.php");
+exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,8 +42,7 @@ session_start();
 		<div class="navi-content">
 			<ul>
 				<li class="navi-item">
-					<a href="home.php">Home</a>
-
+					<a href='Users.php'>Dashboard</a>
 				</li>
 
 				<li class="navi-item">
@@ -79,7 +94,13 @@ session_start();
 	<h1>Account Details</h1>
 	
 
-<h1 style="font-size:30px;">
+	
+<div class="register-content">
+	
+	
+	<table style="margin-left:300px">
+
+
 <?php
 $servername = "localhost";
 $username = "root";
@@ -98,22 +119,77 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // output data of each row
+   
     while($row = $result->fetch_assoc()) {
-        echo "User ID: " . $row["id"]. "<br> Name:" . $row["fname"]. " " . $row["lname"].  "<br>";
-		echo "Gender:"  . $row["gender"] . "<br> Date of Birth:".  $row["dob"]. "<br>";
-		echo "Nationality"  . $row["nationality"]. "<br> Address:"  . $row["add1"]. "<br>"  . $row["add2"]. ","  . $row["add3"]. "<br>" ;
-    }
+    	
+    	
+		if (!isset($_POST['update'])){
+		echo"<form action='".$_SERVER['PHP_SELF']."' method='post'>"; 
+		echo"<tr> <th colspan='4'><p>User ID:".$row["id"]."</p></th> </tr> <tr> <td> <p>First name:</p> </td> <td>";
+		echo"<input type='text' name='fname' value='".$row["fname"]."'>";
+		echo"</td></tr>";
+		
+		echo"<tr><td><p>Last name:</p></td><td>";
+		echo"<input type='text' name='lname' value='".$row["lname"]."'></td></tr>";
+		
+		echo"<tr><td><p>Email:</p> </td><td>";
+		echo"<input type='email' name='email' value='".$row["email"]."'></td></tr><tr><td><p>Mobile Phone:</p></td><td>";
+		echo"<input type='text' name='mobile' value='".$row["mobile"]."'></td></tr><tr><td><p>Date of Birth</p></td><td>";
+		echo"<input type='date' name='dob' value='".$row["dob"]."'></td></tr><tr><td><p>Nationailty:</p></td><td>";
+		echo"<input type='text' name='nationality' value='".$row["nationality"]."'></td></tr><tr><td><p>Address:</p> </td><td>";
+		echo"<input type='text' name='add1' value='".$row["add1"]."'></td></tr><tr><td><p></p> </td><td>";
+		echo"<input type='text' name='add2' value='".$row["add2"]."'></td></tr><tr><td><p>Area:</p> </td><td>";
+		echo"<input type='text' name='add3' value='".$row["add3"]."'></td></tr><tr><td><p>Password:</p> </td><td>";
+		echo"<input type='password' name='password' value='".$row["password"]."'></td></tr></table >";
+
+		echo"<table style='width: 1000px;margin-top: 50px'><tr><td colspan='4' align='center'> ";
+		echo"<input name='update' type='submit' value='Update' class='register-button' style='width: 600px'>";
+		echo"			<br> <br></td></tr></table>";
+
+		
+		echo"</form>";}
+		
+		else{
+		
+	$fname	=$_POST['fname'];
+	$lname	=$_POST['lname'];
+	$email		= $_POST['email'];
+	$mobile	= $_POST['mobile'];
+	$dob	= $_POST['dob'];
+	$nationality	= $_POST['nationality'];
+	$add1	= $_POST['add1'];
+	$add2	= $_POST['add2'];
+	$add3	= $_POST['add3'];
+	$password	= $_POST['password'];
+ 
+			# insert data into mysql database
+				$sql = "UPDATE users SET fname='$fname',lname='$lname',email='$email',mobile='$mobile',
+				dob='$dob',nationality='$nationality', add1='$add1',add2='$add2',add3='$add3', password='$password' WHERE id=".$row["id"]."";
+ 
+		if ($conn->query($sql)) {
+			//echo "New Record has id ".$mysqli->insert_id;
+			echo "<p>Update successfully!</p>";
+			header( "Refresh:3; url=account.php", true, 303);
+
+		} else {
+			echo "<p>MySQL error no {$mysqli->errno} : {$mysqli->error}</p>";
+			exit();
+		}
+
+		
+		}
+		
+		}
 } else {
     echo "0 results";
 }
-$conn->close();
-?>	
-	
 
-	
-	</h1>
-	
-	
+	$conn->close();
+?>
+
+
+</table></div>
+
 </body>
 
 </html>
