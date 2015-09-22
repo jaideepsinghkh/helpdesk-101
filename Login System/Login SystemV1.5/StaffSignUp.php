@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['roles'])){
+header( "Location: error.php");
+exit();
+}
 ?>
 <!DOCTYPE html>
 			<html>
@@ -175,7 +179,7 @@ if (!isset($_POST['submit'])) {
 					<p>Address:</p> 
 					</td>
 					<td>
-					<input type="text" name="add1">
+					<input type="text" name="add1" placeholder="e.g. Unit/Street Number, Street Name">
 					</td>
 					
 					
@@ -186,7 +190,7 @@ if (!isset($_POST['submit'])) {
 					<p></p> 
 					</td>
 					<td>
-					<input type="text" name="add2">
+					<input type="text" name="add2" placeholder="e.g. Postcodes, Suburb ">
 					</td>
 					
 					
@@ -194,10 +198,15 @@ if (!isset($_POST['submit'])) {
 
 				<tr>
 					<td>
-					<p></p> 
+					<p>Area:</p> 
 					</td>
 					<td>
-					<input type="text" name="add3">
+					 <select name="add3" class="gender-select" hidefocus="true">
+    				   	 <option value="South of Brisbane">South of Brisbane</option>
+  				 		 <option value="North of Brisbane">North of Brisbane</option>
+   						 <option value="East of Brisbane">East of Brisbane</option>
+  						 <option value="West of Brisbane">West of Brisbane</option>
+ 					 </select>
 					</td>
 					
 					

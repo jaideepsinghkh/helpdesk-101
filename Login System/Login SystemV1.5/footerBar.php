@@ -34,7 +34,7 @@
 						<a href="#">-- Login</a>
 						<a href="#">-- Register</a>
 						<br>
-						<a href="#">-- Staff Login</a>
+						<a href="stafflogin.php">-- Staff Login</a>
 					</div>
 			</div>
 		</div>

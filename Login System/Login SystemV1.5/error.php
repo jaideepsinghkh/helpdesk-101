@@ -77,14 +77,21 @@ session_start();
 	</nav>
 
 
-	<div class="">
+	<h1>Login System Error!!!!</h1>
+	<h1>You will be redirect to Users Login</h1>
+	
+	<?php
+// remove all session variables
+			session_unset(); 
 
-		<div class="home-content">
-			hello
+// destroy the session 
+			session_destroy(); 
+			
+		header( "Refresh:5; url=login.php", true, 303);
+				
+	?>
 
-		</div>
-	</div>
-
+	
 	<!-- include the footer -->
 	<?php include 'footerBar.php' ?>
 	

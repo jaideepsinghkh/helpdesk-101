@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(isset($_SESSION['roles'])){
+header( "Location: error.php");
+exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -140,7 +144,8 @@ else {
 	} else {
 		echo "<h1>Logged in successfully</h1>";
 		$_SESSION['user']= $user;	
-		header( "Refresh:1; url=staffhome.php", true, 303);
+		$_SESSION['roles']= "admin";	
+		header( "Refresh:1; url=staffs.php", true, 303);
 		}
 }
 ?>		

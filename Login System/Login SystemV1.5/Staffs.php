@@ -1,11 +1,25 @@
 <?php
 session_start();
+
+if($_SESSION['roles']=="admin"){
+}
+
+else{
+header( "Location: error.php");
+exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-<title>Account Details</title>
+<style>
+table, th, td {
+     border: 1px solid black;
+}
+</style>
+<title>Logged in successfully</title>
 	<link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 
@@ -26,7 +40,7 @@ session_start();
 		<div class="navi-content">
 			<ul>
 				<li class="navi-item">
-					<a href="staffhome.php">Home</a>
+					<a href="staffs.php">Dashboard</a>
 
 				</li>
 
@@ -40,7 +54,7 @@ session_start();
 				
 				<li class="navi-item">				
 
-					<a href="#">Services Provider</a>
+					<a href="services1.php">Services Provider</a>
 					
 				</li>
 				
@@ -51,6 +65,7 @@ session_start();
 					if(isset($_SESSION['user'])){
 						echo "<a href='staffaccount.php'> Account Details</a>";
 						echo "<div> <ul><li class='sub-navi-menu3'><a href='logout.php'>Logout</a></li></ul> </div>";
+			
 
 					}		
 					else{		
@@ -58,6 +73,8 @@ session_start();
 					}
 
 					?>
+					
+
 
 
 				</li>
@@ -66,12 +83,8 @@ session_start();
 			</ul>
 		</div>
 	</nav>
-		
-	<h1>Staff Account Details</h1>
-	
-
-<h1 style="font-size:30px;">
-<?php
+	<div class="register-content">
+	<?php
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -82,29 +95,25 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-} 
-
-$sql = "SELECT * FROM staffs WHERE staff='".$_SESSION['user']."'";
+}
+	$sql = "select users.user,category_of_request,details_request,contact_time,request_date from request inner join users on users.id=request.user
+";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "Staff ID: " . $row["staff_id"]. "<br> Name:" . $row["fname"]. " " . $row["lname"].  "<br>";
-		echo "Gender:"  . $row["gender"] . "<br> Date of Birth:".  $row["dob"]. "<br>";
-		echo "Nationality"  . $row["nationality"]. "<br> Address:"  . $row["add1"]. "<br>"  . $row["add2"]. ","  . $row["add3"]. "<br>" ;
-    }
+	echo "<table><tr><th>name</th><th>category</th><th>Details</th><th>contact time</th><th>request date</th></tr>";
+     // output data of each row
+     while($row = $result->fetch_assoc()) {
+         echo "<tr><td>". $row["user"]."</td><td>". $row["category_of_request"]."</td><td>". $row["details_request"] . "</td><td>" .$row["contact_time"]. "</td><td>".$row["request_date"]."</td></tr>" ;
+     }
+	 echo "</table>";
 } else {
-    echo "0 results";
+     echo "0 results";
 }
-$conn->close();
-?>	
-	
 
-	
-	</h1>
-	
-	
+$conn->close();
+?>
+</div>
 </body>
 
 </html>

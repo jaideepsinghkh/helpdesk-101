@@ -1,11 +1,16 @@
 <?php
 session_start();
+
+if(isset($_SESSION['roles'])){
+header( "Location: error.php");
+exit();}
+
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>About Us</title>
+	<title>Home</title>
 	<link rel="stylesheet" href="style/style.css" type="text/css">
 </head>
 
@@ -45,13 +50,6 @@ session_start();
 
 				<li class="navi-item">
 					<a href="contactus.php">Contact Us</a>
-<!-- 					<div>
-						<ul>
-							<li class="sub-navi-menu2"><a href="#">Administrator contact</a></li>
-							<li class="sub-navi-menu2"><a href="#">Brisbane Help desk center</a></li>
-							<li class="sub-navi-menu2"><a href="#">Volunteer contact</a></li>
-						</ul>
-					</div> -->
 				</li>
 				
 				<li class="navi-item">				
@@ -70,7 +68,7 @@ session_start();
 
 					}		
 					else{		
-						echo "<a href='login.php'>Login</a>"	;				
+						echo "<a href='login.php'>Login</a>";				
 					}
 
 					?>
@@ -82,30 +80,19 @@ session_start();
 			</ul>
 		</div>
 	</nav>
-	<div style="height: 1300px;">
-		<div class="aboutus-bg">
-			<div class="aboutus-content">
-				<div>
-					<h1 style="text-align: left">Us</h1>
-				</div>
-
-				<div class="aboutus-title">
-					the short discription of company abcabcb sbsad khqw hueo asoihdq owhdao shdlw ahd jkab sjdq wui dhaos
-				</div>
-
-				<div class="us-content">
 
 
-				</div>
+	<div class="">
 
+		<div class="home-content">
+			hello
 
-			</div>
 		</div>
 	</div>
 
 	<!-- include the footer -->
 	<?php include 'footerBar.php' ?>
-
+	
 </body>
 
 </html>
