@@ -46,13 +46,13 @@ session_start();
 				<li class="navi-item">
 					<a href="contactus.php">Contact Us</a>
 				</li>
-
-				<li class="navi-item">
+				
+				<li class="navi-item">				
 
 					<a href="aboutus.php">About Us</a>
-
+					
 				</li>
-
+				
 				<li class="navi-item">
 
 					<?php
@@ -61,47 +61,39 @@ session_start();
 						echo "<a href='account.php'> Account Details</a>";
 						echo "<div> <ul><li class='sub-navi-menu3'><a href='logout.php'>Logout</a></li></ul> </div>";
 
-					}
-					else{
-						echo "<a href='login.php'>Login</a>";
+					}		
+					else{		
+						echo "<a href='login.php'>Login</a>";				
 					}
 
 					?>
 
 
 				</li>
-
-
+				
+				
 			</ul>
 		</div>
 	</nav>
-	<div class="services-container">
+	
+	<div class="electrician-content">
+		<div style="height:250px;">
+			<h2 style="font-size: 25px;color:#2c3e50;">Electrician</h2>
+			<br>
+			<br>
 
-		<div class="service-class">
-		<div>
-			<p class="welcometitle" style="width:999px;">Choose your serivce type:</p>
+			<h2 style="color:#2c3e50;">An electrician (or sparky) is a tradesperson specializing in electrical wiring of buildings, stationary machines and related equipment. Electricians may be employed in the installation of new electrical components or the maintenance and repair of existing electrical infrastructure. Electricians may also specialize in wiring ships, airplanes, and other mobile platforms, as well as data and cable.</h2>
 		</div>
-			<p>
-			<div><a href="plumbers.php"><img src="image/plumbers.png" width="250px" border="none"></a>
-			</div>
-			</p>
-
-			<div><a href="plumbers.php"><img src="image/electrician.png" width="250px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/aircondition.png" width="250px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/buildingwork.png" width="250px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/carrepair.png" width="250px" border="none"></a>
-			</div>
-
+		
+		<div class="service-img">
+			<div><img src="image/services/electrician/domesticElectrician.jpg"></div>	
+			<div><img src="image/services/electrician/Electrician.gif"></div>
+			<div><img src="image/services/electrician/royalty_free.jpg"></div>
 		</div>
+			
 	</div>
-
-
+		
+	
 	<!-- include the footer -->
 	<?php include 'footerBar.php' ?>
 </body>

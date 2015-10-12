@@ -633,7 +633,7 @@ footer
 
 .service-class div
 {
-	margin: 70px 80px 30px 50px;
+	margin: 10px 80px 80px 0px;
 	float: left;
 }
 .service-class div a
@@ -642,7 +642,7 @@ footer
 }
 .choose-words
 {
-	margin-top: -60px;
+	margin-top: -30px;
 	text-align: left;
 	font-size: 35px;
 	width: 999px;
@@ -656,4 +656,56 @@ footer
 
 .services-container2
 {
+}
+
+.plumber-content
+{
+	margin: 0 auto;
+	width: 1000px;
+	height: 1200px;
+}
+.service-img div img
+{
+	width: 499px;
+	float: left;
+
+}
+
+.electrician-content
+{
+
+	margin: 0 auto;
+	width: 1000px;
+	height: 1370px;
+}
+
+.carrepair-content
+{
+
+	margin: 0 auto;
+	width: 1000px;
+	height: 1270px;
+}
+
+.buildingWork-content
+{
+
+	margin: 0 auto;
+	width: 1000px;
+	height: 1170px;
+}
+.buildingWork-content
+{
+
+	margin: 0 auto;
+	width: 1000px;
+	height: 1170px;
+}
+
+.airCondition-content
+{
+
+	margin: 0 auto;
+	width: 1000px;
+	height: 1170px;
 }

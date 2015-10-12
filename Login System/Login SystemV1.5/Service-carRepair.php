@@ -46,13 +46,13 @@ session_start();
 				<li class="navi-item">
 					<a href="contactus.php">Contact Us</a>
 				</li>
-
-				<li class="navi-item">
+				
+				<li class="navi-item">				
 
 					<a href="aboutus.php">About Us</a>
-
+					
 				</li>
-
+				
 				<li class="navi-item">
 
 					<?php
@@ -61,47 +61,39 @@ session_start();
 						echo "<a href='account.php'> Account Details</a>";
 						echo "<div> <ul><li class='sub-navi-menu3'><a href='logout.php'>Logout</a></li></ul> </div>";
 
-					}
-					else{
-						echo "<a href='login.php'>Login</a>";
+					}		
+					else{		
+						echo "<a href='login.php'>Login</a>";				
 					}
 
 					?>
 
 
 				</li>
-
-
+				
+				
 			</ul>
 		</div>
 	</nav>
-	<div class="services-container">
+	
+	<div class="carrepair-content">
+		<div style="height:300px;">
+			<h2 style="font-size: 25px;color:#2c3e50;">Car Repair</h2>
+			<br>
+			<br>
 
-		<div class="service-class">
-		<div>
-			<p class="welcometitle" style="width:999px;">Choose your serivce type:</p>
+			<h2 style="color:#2c3e50;">Car repair service is to use transmission flushing machine, cooling system flushing machine, power steering flushing machine, air conditioning sanitising machine, and throttle body & fuel system cleaning machines to do an impressive job of maintaining your vehicle, also to make sure your braking system is in great shape.</h2>
 		</div>
-			<p>
-			<div><a href="plumbers.php"><img src="image/plumbers.png" width="250px" border="none"></a>
-			</div>
-			</p>
-
-			<div><a href="plumbers.php"><img src="image/electrician.png" width="250px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/aircondition.png" width="250px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/buildingwork.png" width="250px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/carrepair.png" width="250px" border="none"></a>
-			</div>
-
+		
+		<div class="service-img">
+			<div><img src="image/services/carRepair/123123.jpg"></div>	
+			<div><img src="image/services/carRepair/carrepair.gif"></div>
+			<div><img src="image/services/carRepair/company-client.jpg"></div>
 		</div>
+			
 	</div>
-
-
+		
+	
 	<!-- include the footer -->
 	<?php include 'footerBar.php' ?>
 </body>

@@ -46,13 +46,13 @@ session_start();
 				<li class="navi-item">
 					<a href="contactus.php">Contact Us</a>
 				</li>
-
-				<li class="navi-item">
+				
+				<li class="navi-item">				
 
 					<a href="aboutus.php">About Us</a>
-
+					
 				</li>
-
+				
 				<li class="navi-item">
 
 					<?php
@@ -61,47 +61,39 @@ session_start();
 						echo "<a href='account.php'> Account Details</a>";
 						echo "<div> <ul><li class='sub-navi-menu3'><a href='logout.php'>Logout</a></li></ul> </div>";
 
-					}
-					else{
-						echo "<a href='login.php'>Login</a>";
+					}		
+					else{		
+						echo "<a href='login.php'>Login</a>";				
 					}
 
 					?>
 
 
 				</li>
-
-
+				
+				
 			</ul>
 		</div>
 	</nav>
-	<div class="services-container">
+	
+	<div class="buildingWork-content">
+		<div style="height:300px;">
+			<h2 style="font-size: 25px;color:#2c3e50;">Building Work</h2>
+			<br>
+			<br>
 
-		<div class="service-class">
-		<div>
-			<p class="welcometitle" style="width:999px;">Choose your serivce type:</p>
+			<h2 style="color:#2c3e50;">A building worker is a laborer, bricklayer, who works in the construction industry. He can help you to solve any problems about the building, such as chinks in the wall. In addition, the building worker will also provide some suggestions about the building designer, such as indoor and outdoor environment design and building decoration design.</h2>
 		</div>
-			<p>
-			<div><a href="plumbers.php"><img src="image/plumbers.png" width="250px" border="none"></a>
-			</div>
-			</p>
-
-			<div><a href="plumbers.php"><img src="image/electrician.png" width="250px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/aircondition.png" width="250px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/buildingwork.png" width="250px" border="none"></a>
-			</div>
-
-			<div><a href="plumbers.php"><img src="image/carrepair.png" width="250px" border="none"></a>
-			</div>
-
+		
+		<div class="service-img">
+			<div><img src="image/services/buildingWork/1.jpg"></div>	
+			<div><img src="image/services/buildingWork/2.jpg"></div>
+			<div><img src="image/services/buildingWork/3.jpg"></div>
 		</div>
+			
 	</div>
-
-
+		
+	
 	<!-- include the footer -->
 	<?php include 'footerBar.php' ?>
 </body>
